@@ -23,5 +23,6 @@ uses PUBG as example for the following:
 - As long as there's a social factor, gamers will play, socialize and compete with one another.
 5) hedonic motivation
 - refers to degrees to which playing games is a source of entertainment
-- many studies have recorded use of games for pleasure will play games with better attitude and higher motivation
-- 
+- many studies have recorded use of games for pleasure will play games with better attitude and higher motivation.
+
+
