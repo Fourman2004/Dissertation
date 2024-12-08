@@ -9,7 +9,9 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{textcomp}
+\usepackage{float}
 \usepackage{xcolor}
+\graphicspath{{./images/}}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -53,7 +55,7 @@ The term "Gaming Obsession" could fit this role better. One paper looks into Gam
 \section{Methodology}
 The Experiment for this research will involve creating a game similar to a Idle Game, Similar to games like cookie clicker \cite{CookieSteam21}, Where the Player can log in every so often to play the game and it requires bare minimum interaction from the player. According to \cite{Hwang2024}.\\
 
-For half an hour, They will play the game for that time, or until they request that it ends early. An interview will happen after, going over the player's experiance with the game. Time played will be recorded.\\
+Each participant for each participant  is half an hour. In that time, They will play the game for that time, or until they request that it ends early. An interview will happen after, going over the player's experiance with the game. Time played will be recorded. This Experiment will last three weeks.\\
 
 The Artefact for the experiment will be made in Unity Version 2023.2.20 \cite{Unity23} and stored in this repository:\\
 
@@ -81,9 +83,13 @@ Q2: Could/Should "Online Gaming Addiction" be renamed to "Online Gaming Obsessio
 
 Q3: What truly defines addiction? could addiction and obsession be one in the same?\\
 \subsection {Stats testing}
+Utilising G*Power, A T-test using the Point Biseral Model was conducted to determine the sample size for the experiment. Figure 1 - 2 Show that the reccomended sample size using a medium effect size, a 0.05 error probability and 0.95 Power will result in the sample size being 111.  With the reccomended amount being about 100 participants, and most sources have 200 or more, this is on the smaller end.\\
+
+R will also be used to construct the graphs for time played
 
 \subsection {Restraints}
 One restraint with this research is sample size. Due to my sample being students within the university. This limits the findings heavily, with there not being to get the sample size that will give a more noteworthy effect. In addition, the sample size will be limited even more due to the time period for the experiment only being three weeks. This is a similar pitfall to \cite{Naaj2021}.\\
+
 
 %\section{Results}
 
@@ -96,5 +102,12 @@ One restraint with this research is sample size. Due to my sample being students
 
 
 \section {Addendum}
-
+\begin{figure}[H]
+\includegraphics[width = 8cm]{fig1(2)}
+\caption{The reccomended sample size according to the G*Power t-test}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width = 8cm]{fig2(2)}
+\caption{The reccomended sample size according to the G*Power t-test plotted as a graph, with X as the Power and Y as the sample size}
+\end{figure}
 \end{document}
