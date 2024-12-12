@@ -86,10 +86,21 @@ The Experiment for this research will involve creating a game similar to a Idle 
 
 \url{https://github.falmouth.ac.uk/MS279226/Dissertation-MS279226.git}\\
 
-Data Will be recorded in a Comma seperated Values file (.CSV). This file format makes it easier to format into graphs using programming languages such as R and Python. If utilising python to create the graphs, Pandas, Numpy and other plugins and add-ons would need to be used.
+Data Will be recorded in a Comma seperated Values file (.CSV). This file format makes it easier to format into graphs using programming languages such as R and Python. utilising python to create the graphs, Pandas, Numpy and other plugins and add-ons would need to be used.\\
+
+The figure below shows how the Process will go per participant:
+
+\begin{figure}[H]
+\includegraphics[width = 0.5\textwidth]{UMLProcess}
+\caption{A Diagram stating how the experiment will go for a participant}
+\end{figure}
 
 \subsection{Ethics and safety}
 There are some things to account for with this research, to do with people and their safety. The experiment is in the hands of the participant, with them being required to read a information form and sign a consent form. They can request the experiment to end early, If they no longer consent to the experiment.  If they no longer consent, data will not be used when drawing the conclusion and instead will be destroyed. Despite there being little physical risk, a risk assessment will still need to be carried out, with the removal of items that can be harmful for participants taking part in the research, or the addition of items that can mitigate harm/ provide ease of use with the artifact.\\
+
+Data Handled after the experiment will be stored in the CSV file, and stored in a secure location. If a participant who has requested that they no longer want their data used, it will be obfuscated from the analysis and destroyed immediately after. Communication with the participant will be important as well, and contact will be kept once a month if they so request.\\
+
+The risks of this experiment are centered around the technology used for the experiment. As it is using a mobile device, caution must be taken if the phone is discovered to be faulty, as such faults could cause the triggering of epilepsy, burns due to the battery, and other injuries caused by the materials of the phone breaking. For this reason, the phone's hardware will be throughly inspected and software tested beforehand, with all faulty assets being replaced with a more stable phone. Severe software risks involve the aformentioned triggering of epilepsy, with more common risks including headaches, straining on the eyes and neck; anxiety. For this reason, usage of software will be limited to half an hour and heavily tested. \\
   
 \subsection {Hypothesis}
 There are two main hypothesis with this experiment, with a third one to account for the possibility of it happening:
@@ -110,7 +121,7 @@ Q2: Could/Should "Online Gaming Addiction" be renamed to "Online Gaming Obsessio
 
 Q3: What truly defines addiction? could addiction and obsession be one in the same?\\
 \subsection {Stats testing}
-Utilising G*Power, A T-test using the Point Biseral Model was conducted to determine the sample size for the experiment. Figure 1 Shows that the reccomended sample size using a medium effect size (0.3), a 0.05 error probability and 0.95 Power will result in the sample size being 111.  With the reccomended amount being about 100 participants, and most sources have 200 or more, this is on the smaller end. Python will also be used to construct the graphs for time played, and compares the time played with the atrefact to how long on average the participant plays games, if any.\\
+Utilising G*Power, A T-test using the Point Biseral Model was conducted to determine the sample size for the experiment. Figure 2 Shows that the reccomended sample size using a medium effect size (0.3), a 0.05 error probability and 0.95 Power will result in the sample size being 111.  With the reccomended amount being about 100 participants, and most sources have 200 or more, this is on the smaller end. Python will also be used to construct the graphs for time played, and compares the time played with the atrefact to how long on average the participant plays games, if any.\\
 
 The code below is how it will be plotted:
 \begin{algorithm}
@@ -122,7 +133,7 @@ The code below is how it will be plotted:
 	\STATE $Plot Y-axis$
 	\STATE $Plot Graph Points$
 \ENDFOR
-\STATE $print graph to screen$
+\STATE $printgraphtoscreen$
 \end{algorithmic}
 \end{algorithm}
 
@@ -131,7 +142,7 @@ The code below is how it will be plotted:
 \caption{The reccomended sample size according to the G*Power t-test}
 \end{figure}
 
-A Graph of the G*Power results was also plotted in the program, which portrays the increase in sample size and it's corralation to the Power. this is shown in figure 2. In addition, it can be anticipated that the sample size will more accurately be around 50 people, due to the restriction of keeping the participants to the university rather than the broader public. 
+A Graph of the G*Power results was also plotted in the program, which portrays the increase in sample size and it's corralation to the Power. this is shown in figure 3. In addition, it can be anticipated that the sample size will more accurately be around 50 people, due to the restriction of keeping the participants to the university rather than the broader public. 
 
 \begin{figure}[H]
 \includegraphics[width = 0.5\textwidth]{fig2(2)}
@@ -140,7 +151,7 @@ A Graph of the G*Power results was also plotted in the program, which portrays t
 
 \subsection {Restraints}
 One restraint with this research is sample size. Due to my sample being students within the university. This limits the findings heavily, with there not being to get the sample size that will give a more noteworthy effect. In addition, the sample size will be limited even more due to the time period for the experiment only being three weeks. This is a similar pitfall to \cite{Naaj2021}.\\
-
+\subsection {test plan}
 
 %\section{Results}
 
