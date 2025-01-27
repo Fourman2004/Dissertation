@@ -6,7 +6,7 @@ import seaborn as sb
 csv_data = pd.read_csv(".csv")
 
 def plotData():
-sb.plot(x="",y="")
+    sb.plot(x="",y="")
 
 
 

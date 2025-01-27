@@ -14,12 +14,11 @@ public class ButtonFunctionality : MonoBehaviour
     {
         if (!Manager)
         {
-            StartCoroutine(Coroutine);
-            Manager = true;
+            points += points * quantity;
         }
         else
         {
-            points += points * quantity;
+            StartCoroutine(Coroutine);
         }
     }
 
