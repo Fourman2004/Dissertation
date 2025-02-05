@@ -1,27 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonFunctionality : MonoBehaviour
 {
-    private readonly IEnumerator Coroutine;
 
-    public int points,quantity;
+    public int quantity;
+    public Text text;
+    public GameManager gameManager;
 
-    bool Manager;
-   
-    void ButtonPress()
+    public void Start()
     {
-        if (!Manager)
-        {
-            points += points * quantity;
-        }
-        else
-        {
-            StartCoroutine(Coroutine);
-        }
     }
 
-    
+    public void ButtonPress(int points)
+    {
+        gameManager.Points += points;
+        text.text = "Points:" + gameManager.Points.ToString();
+       
+    }
+
+
 
 }
