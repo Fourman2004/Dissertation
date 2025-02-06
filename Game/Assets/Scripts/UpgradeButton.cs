@@ -1,26 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class UpgradeButton : MonoBehaviour
 {
 
-    public int Points;
+    public GameManager gameManager;
 
-    public ButtonFunctionality[] Buttons;
 
-    public Text text;
 
     // Start is called before the first frame update
     void Start()
     {
-        text.text = "Points:" + Points.ToString();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void quantUpdate()
+    {
+     
     }
 }
