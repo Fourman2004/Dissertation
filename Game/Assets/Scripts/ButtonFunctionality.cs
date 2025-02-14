@@ -10,7 +10,7 @@ public class ButtonFunctionality : MonoBehaviour
     public GameManager gameManager;
 
     [SerializeField]
-    int quantity;
+    public int quantity;
 
     public void Start()
     {
