@@ -9,12 +9,14 @@ public class UpgradeButton : MonoBehaviour
 {
 
     [SerializeField]
-    int threshold;
+    public float threshold;
 
     public GameManager gameManager;
 
     public ButtonFunctionality buttonToUpgrade;
 
+    [SerializeField]
+    float Mult;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +34,9 @@ public class UpgradeButton : MonoBehaviour
         if (gameManager.Points >= threshold)
         {
             buttonToUpgrade.quantity++;
-            gameManager.Points -= threshold;
+            gameManager.Points -= (int)threshold;
             gameManager.text.text = "Points:" + gameManager.Points.ToString();
-            threshold += (int)Mathf.Pow(Convert.ToSingle(threshold), 2);
+            threshold += (int)Mathf.Pow(threshold, Mult);
             Debug.Log("New Threshold:" + threshold);
         }
         else
