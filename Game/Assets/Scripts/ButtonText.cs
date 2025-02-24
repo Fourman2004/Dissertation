@@ -23,12 +23,12 @@ public class ButtonText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (Upgrade)
+        switch (Upgrade)//switch/case to defrentiate between the two types of buttons
         {
-            case (true):
+            case (true)://true sets the upgrade button
                 buttontext.text = text + Button2.threshold + ")";
                 break;
-            case (false):
+            case (false)://false sets the points button
                 buttontext.text = text + button1.quantity + ")";
                 break;
         }
