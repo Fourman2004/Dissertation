@@ -23,13 +23,17 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.GetInt("PlayerID", counter++); 
     }
 
-   public void CollectData()
+    
+    // CollectData() functionality was created with the assistance of Ai (CoPilot).
+    public void CollectData()
    {
-        string filePath = Application.dataPath + "/Data.csv";
-        StreamWriter writer = new StreamWriter(filePath);
-        writer.WriteLine("ID,ActualTime,Time");
-        writer.WriteLine(" ," + Time.time + ", ");
-        writer.Close();
-        Debug.Log("Saved at" + filePath);
+        string filePath = Application.dataPath + "/Data.csv";//Creates File 
+        using StreamWriter writer = new(filePath, true);// creates a new data streamwriter with the ability to append
+        {
+            if (!File.Exists(filePath)) {writer.WriteLine("ID,ActualTime,Time"); }//Writes the headers first if the file doesn't exist
+            writer.WriteLine(" ," + (int)Time.time + ", ");//Writes the data
+        }
+        writer.Close();//Shuts down the writer, until it needs to write again
+        Debug.Log("Saved at" + filePath);//shows where it is in editor
     }
 }
