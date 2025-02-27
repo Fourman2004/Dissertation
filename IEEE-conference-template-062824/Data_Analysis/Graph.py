@@ -1,12 +1,14 @@
 import pandas as pd
-import matplotlib as mpl
+import matplotlib.pyplot as plt
 import seaborn as sb
 
 
-csv_data = pd.read_csv(".csv")
+csv_data = pd.read_csv("data.csv")
 
 def plotData():
-    sb.plot(x="",y="")
+    sb.set_style("darkgrid")
+    sb.lineplot(x = csv_data["Actual Time"], y = csv_data["Time"])
+    plt.show()
 
 
 
