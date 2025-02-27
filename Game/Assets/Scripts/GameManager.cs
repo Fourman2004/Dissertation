@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         text.text = "Points:" + Points.ToString();//initalizes text at the top of the page
-        PlayerPrefs.GetInt("PlayerID", counter++); 
     }
 
     
@@ -30,8 +29,8 @@ public class GameManager : MonoBehaviour
         string filePath = Application.dataPath + "/Data.csv";//Creates File 
         using StreamWriter writer = new(filePath, true);// creates a new data streamwriter with the ability to append
         {
-            if (!File.Exists(filePath)) {writer.WriteLine("ID,ActualTime,Time"); }//Writes the headers first if the file doesn't exist
-            writer.WriteLine(" ," + (int)Time.time + ", ");//Writes the data
+            writer.WriteLine("ID,ActualTime,Time"); //Writes the headers first
+            writer.WriteLine(" ," + (int)Time.time + ", "); //Writes the data
         }
         writer.Close();//Shuts down the writer, until it needs to write again
         Debug.Log("Saved at" + filePath);//shows where it is in editor
