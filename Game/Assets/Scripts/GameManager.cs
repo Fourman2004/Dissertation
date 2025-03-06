@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     
     // CollectData() functionality was created with the assistance of Ai (CoPilot).
-    public void CollectData()
+    public void CollectData(bool dataSuccess)
    {
         string filePath = Application.dataPath + "/Data.csv";//Creates File 
         using StreamWriter writer = new(filePath, true);// creates a new data streamwriter with the ability to append
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
             writer.WriteLine(" ," + (int)Time.time + ", ");//Writes the data
         }
         writer.Close();//Shuts down the writer, until it needs to write again
+        dataSuccess = true;
         Debug.Log("Saved at" + filePath);//shows where it is in editor
     }
 }
