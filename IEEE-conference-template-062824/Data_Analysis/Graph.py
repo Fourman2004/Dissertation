@@ -7,7 +7,7 @@ csv_data = pd.read_csv("data.csv")
 
 def plotData():
     sb.set_style("darkgrid")
-    sb.lineplot(x = csv_data["Actual Time"], y = csv_data["Time"])
+    sb.regplot(x = csv_data["Time"], y = csv_data["Actual Time"], data = csv_data, ci=None)
     plt.show()
 
 
