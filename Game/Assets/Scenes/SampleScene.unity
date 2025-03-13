@@ -367,6 +367,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1989987763}
     - target: {fileID: -3405632961423992761, guid: 9cde32b2dd3db114e92884990648354c, type: 3}
+      propertyPath: Testbool
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3405632961423992761, guid: 9cde32b2dd3db114e92884990648354c, type: 3}
       propertyPath: buttonFunc
       value: 
       objectReference: {fileID: 0}

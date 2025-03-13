@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public Text text;
 
-    int counter;
+    public bool Testbool;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         }
         writer.Close();//Shuts down the writer, until it needs to write again
         dataSuccess = true;
+        Testbool = dataSuccess;
         Debug.Log("Saved at" + filePath);//shows where it is in editor
     }
 }
