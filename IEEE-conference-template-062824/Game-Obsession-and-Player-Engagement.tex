@@ -14,6 +14,8 @@
 \usepackage{textcomp}
 \usepackage{float}
 \usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{lscape}
 \graphicspath{{./images/}}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -93,6 +95,7 @@ The UI for such a prototype may look like the following:
 \begin{center}
 \includegraphics[width = 0.25\textwidth, ]{Sim1}
 \caption{A Diagram stating how the experiment may look}
+\label{tab:figure1}
 \end{center}
 \end{figure}
 
@@ -100,16 +103,17 @@ The UI for such a prototype may look like the following:
 The second section of the experiment is an interview/survey, which will go over what the participants liked about the game, what they didn't like, and how they go about gaming habits normally. This is GDPR compliant. The survey/interview should be around 5 minutes, with a maximum of 20 minutes.
 
 \subsection{Testing}
-Unit Testing is conducted throughout the creation of the unity artefact, for integer's, floats and bools, amongst other variables. Being already built into the engine
+Unit Testing is conducted throughout the creation of the unity artefact, for integer's, floats and bools, amongst other variables.
 
 \subsection{Recording data}
 Data will be recorded in a comma-seperated Values file (.CSV). This file format makes it easier to format into graphs using programming languages such as R and Python. Utilising Python to create the graphs, Pandas, Numpy and other plugins and add-ons would need to be used. A method of data collection that could be considered is EEG, which is used in Jing's research \cite{Jing2024} and \cite{Ruqeyya2022}. However, EEG could be seen as invasive, and the institute will not have this equipment. The method chosen will be a more in-person method, manually recording the player's time played. If a participant has requested that they no longer want their data used, it will be obfuscated from the analysis and destroyed immediately after. Communication with the participant will be important as well, and contact will be kept once a month if they so request.\\
 
-The figure below shows how the Process will go per participant:
+This figure (\ref{tab:figure2}) shows how the Process will go per participant:
 
 \begin{figure}[H]
 \includegraphics[width = 0.5\textwidth]{UMLProcess}
 \caption{A Diagram stating how the experiment will go for a participant}
+\label{tab:figure2}
 \end{figure}
 
 \subsection{Ethics and safety}
@@ -162,23 +166,65 @@ The code below is how it will be plotted:
 \begin{figure}[H]
 \includegraphics[width =0.5 \textwidth]{fig1}
 \caption{The recommended sample size according to the G*Power t-test}
+\label{tab:figure3}
 \end{figure}
 
-A Graph of the G*Power results was also plotted in the program, which portrays the increase in sample size and its correlation to the Power. This is shown in Figure 4. In addition, it can be anticipated that the sample size will more accurately be around 50 people due to the restriction of keeping the participants to the university rather than the broader public. 
+A Graph of the G*Power results was also plotted in the program, which portrays the increase in sample size and its correlation to the Power. This is shown in Figure 4. In addition, it can be anticipated that the sample size will more accurately be around 15 people due to the restriction of keeping the participants to the university rather than the broader public. 
 
 \begin{figure}[H]
 \includegraphics[width = 0.5\textwidth]{fig2}
 \caption{The recommended sample size according to the G*Power t-test plotted as a graph, with X as the Power and Y as the sample size}
+\label{tab:figure4}
 \end{figure}
 
 \subsection {Restraints}
 One restraint with this research is the sample size. Due to my sample being students within the university. This limits the findings heavily, with there not being enough to get the sample size that will give a more noteworthy effect. In addition, the sample size will be limited even more due to the period for the experiment only being three weeks. This is a similar pitfall to \cite{Naaj2021} and \cite{Ruqeyya2022}.\\
 
 \section{Results And Discussion}
+\begin{table}[H]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{tabular}{@{}lll@{}}
+\toprule
+Participant Number & Study Time Played (minutes) & Average Time Played (minutes) \\ \midrule
+1                  & 5                     & 180                           \\ \midrule
+2                  & 10                    & 240                           \\
+3                  & 15                    & 270                           \\
+4                  & 10                    & 150                           \\
+5                  & 4.2                   & 540                           \\
+6                  & 5.2                   & 240                           \\
+7                  & 5                     & 270                           \\
+8                  & 5.4                   & 270                           \\
+9                  & 5.4                   & 180                           \\
+10                 & 5                     & 180                           \\
+11                 & 8.6                   & 240                           \\
+12                 & 5.8                   & 90                            \\
+13                 & 4.3                   & 120                           \\
+14                 & 15                    & 180                          
+\end{tabular}%
+}
+\caption{Table 1 - The data collected from the experiment over two weeks.}
+\label{tab:data-table}
+\end{table}
+
+After conducting the study, the results show a negative correlation. \ref{tab:data-table} shows the results plotted in the graph below \ref{tab:figure5} in conjunction with the table; the highest time recorded is 540 minutes, or 9 hours, with the average of 225
+ minutes, or 3.75 hours. The average time for playing through the study came out to 6 minutes. A reason for this is due to the limitations with the study being very time-sensitive, along with the inability to find the number of participants required by my T-test. Participant 5 is a rather anomalous result due to the high amount of hours put into gaming, as mentioned in the dataset from the interview conducted alongside the artefact, whilst having the lowest recorded time within the dataset.
+
 \begin{figure}[H]
 \includegraphics[width = 0.5\textwidth]{Graph1}
 \caption{The correlation between perceived time and actual time.}
+\label{tab:figure5}
 \end{figure}
+
+It is within reason to suspect and accept from the data that H3 is false, whilst there's plausibility that H1 is true. The best solution for clarifying this is to perform the experiment with a larger parcitipant group, along with a longer time-frame to conduct the study. H2 could also be plausible, as it is tied to the null hypothesis and will be subject to the same solution as H1.\\
+
+From the interview, outside of asking about the hours played, some of the questions include:
+
+Q1 - The definition of addiction the NHS uses revolves around the use of substances, with it's definition being defined as \textbf{"not having control over doing, taking or using something to the point where it could be harmful to you"}. Using this definition, does it accurately fit your relation to gaming?\\
+
+12 ( or 86\%) of the participants answered this question with "no", whilst only 2 (or 14\%) affirmed this definition to their relation with gaming. When asked why, most responses followed a structure of self control and moderation. 
+
+
 \section{Conclusion}
 
 

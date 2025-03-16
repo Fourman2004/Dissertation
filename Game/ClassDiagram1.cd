@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameManager">
+    <Position X="1" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAggAAAAAABAAAAAAAAAAAIEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Buttons" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ButtonFunctionality">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEAAAAAAACAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ButtonFunctionality.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="gameManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ButtonText">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAgABAAAAAIAAAIAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\ButtonText.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="button1" />
+      <Field Name="Button2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="UpgradeButton">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAACAAABAAAAAAAAAAAAAAACAAAACAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\UpgradeButton.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="gameManager" />
+      <Field Name="buttonToUpgrade" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
