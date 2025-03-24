@@ -39,7 +39,7 @@ MS279226@falmouth.ac.uk}
 
 
 \begin{abstract}
-Online gaming disorder, or OGA, has become more prevalent in modern times, especially within the research sector. It is up for debate on how we can properly define OGA, how it impacts societal views and/or personal life and how people can mitigate or reduce the impact of OGA. Tise observation of game addiction and player engagement is studied and analysed from a sample group of 14 people and will be explained, through correlating time recorded.
+Online gaming disorder, or OGA, has become more prevalent in modern times, especially within the research sector. It is up for debate on how we can properly define OGA, how it impacts societal views and/or personal life and how people can mitigate or reduce the impact of OGA. This observation of game addiction and player engagement is studied and analysed from a sample group of 14 people and will be explained, by the correlation of time recorded to average play time along with interviewing the participants to see the general view of OGA, the debate about if it should be called Game Obsession and what makes games engaging media. It is found that 
 \end{abstract}
 \begin{IEEEkeywords}
 engagement, obsession, mobile games
@@ -102,17 +102,24 @@ The UI for such a prototype may look like the following:
 The second section of the experiment is an interview/survey, which will go over what the participants liked about the game, what they didn't like, and how they go about gaming habits normally. This is GDPR compliant. The survey/interview should be around 5 minutes, with a maximum of 20 minutes.
 
 \subsection{Testing}
-Unit Testing is conducted throughout the creation of the unity artefact, for integer's, floats and bools, amongst other variables.
+Unit Testing is conducted throughout the creation of the unity artefact for integers, floats, and bools, among other variables. 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = 0.5\textwidth, ]{Unittesting}
+\caption{A Diagram stating how the experiment may look}
+\label{tab:figure2}
+\end{center}
+\end{figure}
 
 \subsection{Recording data}
 Data will be recorded in a comma-separated Values file (.CSV). This file format makes it easier to format into graphs using programming languages such as R and Python. Utilising Python to create the graphs, Pandas, Numpy and other plugins and add-ons would need to be used. A method of data collection that could be considered is EEG, which is used in Jing's research \cite{Jing2024} and \cite{Ruqeyya2022}. However, EEG could be seen as invasive, and the institute will not have this equipment. The method chosen will be a more in-person method, manually recording the player's time played. If a participant has requested that they no longer want their data used, it will be obfuscated from the analysis and destroyed immediately after. Communication with the participant will be important as well, and contact will be kept once a month if they so request.\\
 
-This figure (\ref{tab:figure2}) shows how the process will go per participant:
+This figure (\ref{tab:figure3}) shows how the process will go per participant:
 
 \begin{figure}[H]
-\includegraphics[width = 0.5\textwidth]{UMLProcess}
+\includegraphics[width = \textwidth]{UMLProcess}
 \caption{A Diagram stating how the experiment will go for a participant}
-\label{tab:figure2}
+\label{tab:figure3}
 \end{figure}
 
 \subsection{Ethics and safety}
@@ -128,30 +135,28 @@ There are two main hypotheses with this experiment, with a third one to account 
 
 H1: The Player will have hyperfocus on the game and/or fulfil most of the criteria of game addiction mentioned in \cite{NHSHamp24}, though after being told it's over or requesting, they do not see a reason to keep going.\\
 
-
 H2: The Player will not fulfil any criteria, so there is no change plausible.\\
 
-H2 This is in line with Nursafika's paper \cite{Nursafika2024}, which is a study using stumble guys, a competitive party game where you compete in various minigames while being subjected to silly in-game physics. With the use of the Game Experience Questionnaire (GEQ) method, they found that 61.46\% of participants could return to reality after playing the game, 58.30\% felt immersed in the game and 57\% felt the game harmed them, which can be seen as a lesser effect when comparing that result to the 77.28\% of participants who felt the game has had a positive effect on them. At least half of all other values were above 60\%,  with the conclusion that stumble guys have little to no negative impact or addictive nature to players of stumble guys.\\
+H2 is in line with Nursafika's paper \cite{Nursafika2024}, which is a study using stumble guys, a competitive party game where you compete in various minigames while being subjected to silly in-game physics. With the use of the Game Experience Questionnaire (GEQ) method, they found that 61.46\% of participants could return to reality after playing the game, 58.30\% felt immersed in the game and 57\% felt the game harmed them, which can be seen as a lesser effect when comparing that result to the 77.28\% of participants who felt the game has had a positive effect on them. At least half of all other values were above 60\%,  with the conclusion that stumble guys have little to no negative impact or addictive nature to players of stumble guys.\\
 
 H3: The Player will fulfil the criteria of H1, but will continue with the experiment, even after it's over, either through the duration being up or from requesting it to stop. This will fulfil all of the criteria in \cite{NHSHamp24} and be classed as addiction. \\
 
 \subsection{Questions}
 There are three main questions in this research:
 
-Q1: What is the perception of OGA and the related subject?
+ \textbf{Q1: What is the perception of OGA and the related subject?}
 
-Q2: Is there a correlation between perceived time playing a game and Actual time?
+ \textbf{Q2: Is there a correlation between perceived time playing a game and Actual time?}\\
 
-Q3: What truly defines addiction? Could addiction and obsession be the same?\\
 \subsection{Stats testing}
 Utilising G*Power, A T-test using the Point Biseral Model was conducted to determine the sample size for the experiment. Figure 3 shows that the recommended sample size using a large effect size (0.5), a 0.05 error probability and 0.8 Power will result in the sample size being 21.  With the recommended amount being about 100 participants and most sources having 200 or more, this is on the smaller end, similar to the paper Ruqeyya wrote \cite{Ruqeyya2022}, which had only 31 participants.  Python will also be used to construct the graphs for time played and compare the time played with the effect of how long, on average, the participant plays games, if any.\\
 
-There is a Null hypothesis with the player not focusing on the game and seeing no reason to continue. This has less than a 5\% chance of occurring. 
+There is a Null hypothesis in which the player does not focus on the game and sees no reason to continue. This has less than a 5\% chance of occurring. 
 
 \begin{figure}[H]
 \includegraphics[width =0.5 \textwidth]{fig1}
 \caption{The recommended sample size according to the G*Power t-test}
-\label{tab:figure3}
+\label{tab:figure4}
 \end{figure}
 
 A Graph of the G*Power results was also plotted in the program, which portrays the increase in sample size and its correlation to the Power. This is shown in Figure 4. In addition, it can be anticipated that the sample size will more accurately be around 15 people due to the restriction of keeping the participants to the university rather than the broader public. 
@@ -159,7 +164,7 @@ A Graph of the G*Power results was also plotted in the program, which portrays t
 \begin{figure}[H]
 \includegraphics[width = 0.5\textwidth]{fig2}
 \caption{The recommended sample size according to the G*Power t-test plotted as a graph, with X as the Power and Y as the sample size}
-\label{tab:figure4}
+\label{tab:figure5}
 \end{figure}
 
 \subsection {Restraints}
@@ -192,47 +197,89 @@ Participant Number & Study Time Played (minutes) & Average Time Played (minutes)
 \label{tab:data-table}
 \end{table}
 
-After conducting the study, the results show a negative correlation. \ref{tab:data-table} shows the results plotted in the graph below \ref{tab:figure5} in conjunction with the table; the highest time recorded is 540 minutes, or 9 hours, with an average of 225
+After conducting the study, the results show a negative correlation. \ref{tab:data-table} shows the results plotted in the graph below \ref{tab:figure6} in conjunction with the table; the highest time recorded is 540 minutes, or 9 hours, with an average of 225
  minutes, or 3.75 hours. The average time for playing through the study came out to 6 minutes. A reason for this is due to the limitations of the study being very time-sensitive, along with the inability to find the number of participants required by my T-test. Participant 5 is a rather anomalous result due to the high amount of hours put into gaming, as mentioned in the dataset from the interview conducted alongside the artefact, whilst having the lowest recorded time within the dataset.
 
 \begin{figure}[H]
 \includegraphics[width = 0.5\textwidth]{Graph1}
 \caption{The correlation between perceived time and actual time.}
-\label{tab:figure5}
+\label{tab:figure6}
 \end{figure}
 
-It is within reason to suspect and accept from the data that H3 is false, whilst there's plausibility that H1 is true. The best solution for clarifying this is to experiment with a larger participant group, along with a longer time frame to conduct the study. H2 could also be plausible, as it is tied to the null hypothesis and will be subject to the same solution as H1.\\
+It is within reason to suspect and accept from the data that H3 is false, whilst there's plausibility that H1 is true. The best solution for clarifying this is to experiment with a larger participant group, along with a longer time frame to conduct the study. H2 could also be plausible, as it is tied to the null hypothesis and will be subject to the same solution as H1. Overall, this data is inconclusive and more work would need to be done regarding this study.\\
+
+\begin{figure}[H]
+\includegraphics[width = 0.5\textwidth]{Graph2}
+\caption{The correlation between perceived time and actual time.}
+\label{tab:figure7}
+\end{figure}
+
+There is, however, a correlation between the number of hours a participant sleeps to the amount of time spent whilst playing games. Figure 7\ref{tab:figure7} and figure 8\ref{tab:figure8} showcase this change, with the amount of sleep increasing the longer they play games. This is in stark contrast to \cite{Yamazaki2022}, which is a study on general electronics and display screen usage, along with its effect on sleep. The graphs tell the exact opposite of \cite{Yamazaki2022}, and imply that Participants sleep better than if they didn't play/played less.
+
+
+\begin{figure}[H]
+\includegraphics[width = 0.5\textwidth]{Graph3}
+\caption{The correlation between perceived time and actual time.}
+\label{tab:figure8}
+\end{figure}
+
 
 From the interview, outside of asking about the hours played, some of the questions include:\\
 
-A) When you hear of game addiction, what does your mind immediately think of?\\
+ \textbf{A) When you hear of game addiction, what does your mind immediately think of?}\\
 
-This question spurred many answers about the perception of OGA, with the majority of answers having things in common. The perception of OGA follows Reclusion, prolonged behaviour that is detrimental both to one's health and finances and with that prolonged behaviour, difficulty functioning in society. Though other answers exemplify specific game titles, like World of Warcraft, league of Legends and Final Fantasy 14, which are known to have massive player bases over the years they have been available. Some answers express a generational divide, such as one answer claiming defamatory news articles written by an out-of-touch older generation or grandparents telling them one hour is way too long for a session of video games.\\
+This question spurred many answers about the perception of OGA, with the majority of answers having things in common. The perception of OGA follows Reclusion, prolonged behaviour that is detrimental both to one's health and finances and with that prolonged behaviour, difficulty functioning in society. Other answers exemplify specific game titles, like World of Warcraft, League of Legends, and Final Fantasy 14, which are known to have massive player bases over the years they have been available. Some answers express a generational divide, such as one answer claiming defamatory news articles written by an out-of-touch older generation or grandparents telling them one hour is way too long for a session of video games.\\
 
 One answer out of the Fourteen is an interesting take on the topic: "Just like hobbies, people tend to misinterpret a video game hobby. They claim it's an addiction but it's just a usual thing you love doing." harkens at the fact someone might love what they do with their hobbies to be societally seen as addicted. This answer to this question, whilst opinionated, does show that whilst most people have some form of negative outlook on what OGA is, it could also be argued that, to a lesser extent, is simply the overbearing love for what they enjoy when not dealing with the mundanity of life.\\
 
-B) - The definition of addiction the NHS uses revolves around the use of substances, with its definition being defined as \textbf{"not having control over doing, taking or using something to the point where it could be harmful to you"}. Using this definition, does it accurately fit your relation to gaming?\\
+ \textbf{B) - The definition of addiction the NHS uses revolves around the use of substances, with its definition being defined as \textit{"not having control over doing, taking or using something to the point where it could be harmful to you"}. Using this definition, does it accurately fit your relation to gaming?}\\
 
 12 ( or 86\%) of the participants answered this question with "no", whilst only 2 (or 14\%) affirmed this definition to their relation with gaming. When asked why, most responses followed a structure of self-control and moderation, though once again highly opinionated. Most answers normally consist of "because I do/have X (where X is a habit used to moderate their time playing video games), I do not believe I suffer from it(OGA).". Interesting answers come from those that affirmed, with "I do stop playing when needed to...When  the game gets good I keep trying to play "one more game"." and "My state with games is using them to keep a healthy state of mind; the issue I have is making sure gaming and gaming-related activities do not become one."\\
 
-The consensus from this question is mainly you have ways of moderating it, even if creating that moderation seems difficult.\\
+The consensus from this question is that you have ways of moderating it, even if creating that moderation seems difficult.\\
 
-C) Do you think "Game Obsession" would be better suited as a name for game addiction? Why?\\
+ \textbf{C) Do you think "Game Obsession" would be better suited as a name for game addiction? Why?}\\
 
 The Majority of the answers for the question reflect a negatory response, mainly referring to it as a "gateway term", and that addiction is still an ongoing issue. One participant states that it should be treated as an issue separate from OGA, as whilst at surface level it's the same as any other addiction, it is vastly different to addictions such as substance and gambling.\\
 
 Such questions, along with the data presented, allow the following research questions to be answered:\\
 
-Q1)  What is the perception of OGA and the related subject?
+ \textbf{Q1)  What is the perception of OGA and the related subject?}
 The perception of OGA and the subject of OGA is seen as an issue that can be regulated with moderation and routine, whilst the common perception of it is normally indicative of poor health and hygiene, the inability to function in a modern society or a popular long-lasting game franchise, series or title. The most conclusive answer to this research question is the societal view of OGA is seen negatively, either due to generational differences or a common stigma and personification.\\
 
-Q2) Is there a Is there a correlation between perceived time playing a game and Actual time?
-There is a correlation between game time and actual time. The speculated result would've been positive, with the higher times mentioned in the interview being seen as higher times played for the game, though the opposite was true, with only a few participants reaching 10+ minutes of playtime, and the average being around six minutes. A variety of reasons could exist for this and weren't accounted for, such as the genre of the game, the art style or 
+ \textbf{Q2) Is there a Is there a correlation between perceived time playing a game and Actual time?}
+There is a correlation between game time and actual time. The speculated result would've been positive, with the higher times mentioned in the interview being seen as higher times played for the game, though the opposite was true, with only a few participants reaching 10+ minutes of playtime, and the average being around six minutes. A variety of reasons could exist for this and weren't accounted for, such as the genre of the game or art style, for example. Because of this, there is a weak and negative correlation with this measurement.
 
 \section{Conclusion}
-
+Overall In this paper, a study was conducted about OGA and Player engagement, utilising an Idle simulation game and interview. From a participation group of 14 people over 48 hours, there was a weak and negative correlation between the player's sense of time and the player's mentioned time. There is, however, a correlation between Time spent playing games and the number of hours of sleep a participant has showing a positive correlation between the time played and the sleep each participant gets. This paper discussed and researched Game addiction,  and what defines Game Addiction, both using the medical paradigm and from the public view. Moving forward, this experiment could be attempted again, with differing game genres, art styles, study periods and sample sizes.
 
 \bibliographystyle{IEEEtran}
 \bibliography{Dissertationbib.bib}
+
+\section {Addendum - Reflection}
+Throughout this study, I have had, in hindsight, multiple issues within it, mainly regarding the six subsections listed out below.
+\subsection{Cognitive}
+Throughout this study, one issue I had was the gathering and recalling the data for the background, either due to not knowing where to look, forgetting where to look or how to properly comprehend some of the topics and methods within the papers found. To this end, it made producing the background difficult and tedious. Starting from april 11th unti 23rd December 2025, I will look into the concepts presented not only in the papers found for this paper, but other papers as well, in regard to methodologies. 
+
+%S - Specific:
+%M - Measureable:
+%A- Achiveable: 
+%R - Relevance:
+%T - Time:
+
+
+Another point of improvement would be my use of G*Power. With 
+
+%S - Specific
+%M - Measureable:
+%A- Achiveable: 
+%R - Relevance:
+%T - Time:
+\subsection{Methodological}
+
+\subsection{Affective}
+\subsection{Dispositional}
+\subsection{Interpersonal}
+\subsection{Practice}
 
 \end{document}
