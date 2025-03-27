@@ -22,6 +22,32 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codered}{rgb}{1,0,0}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\lstdefinestyle{style}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codered},
+    keywordstyle=\color{orange},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codegreen},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    %numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=style}
+
 \title{Game Obsession and Player Engagement focused on mobile gaming environments \\
 %{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured for https://ieeexplore.ieee.org  and
 %should not be used}
@@ -109,17 +135,25 @@ The UI for such a prototype may look like the following:
 The second section of the experiment is an interview/survey that will discuss what the participants liked about the game, what they didn't like, and how they normally go about gaming. This is GDPR compliant. The survey/interview should last around 5 minutes, with a maximum of 20 minutes.
 
 \subsection{Testing}
-Unit Testing is conducted throughout the artefact's creation for integers, floats, and bools, among other variables. Unity has in built 
+Unit Testing is conducted throughout the artefact's creation for integers, floats, and bools, among other variables. Unity uses a plug-in that will allow the creation of Unit tests, both in runtime and during editing, with a requirement that there must be an assembly file where the scripts are located, then you can write the tests required. Alongside the Automated Unit tests, there will be a manual walkthrough of the UI and its functionality, both of its requirements and function. The need for stress testing can be done to check for hardware limitations, along with memory leaks, which can go in tandem with the use of the Profiler \ref{tab:Profiler}.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width = 0.5\textwidth, ]{Unittesting}
-\caption{A Diagram stating how the experiment may look}
-\label{tab:figure2}
+\caption{Unit testing within the Unity scene}
+\label{tab:figure3}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = 0.5\textwidth, ]{Profiler}
+\caption{Profiler within}
+\label{tab:Profiler}
 \end{center}
 \end{figure}
 
 \subsection{Recording data}
-Data will be recorded in a comma-separated Values file (.CSV). This file format makes it easier to format into graphs using programming languages such as R and Python. Python, with Pandas, MatPlotlib, Numpy and seaborn would need to be used to create the graphs; as seen in the code below\ref{tab:Listing1}. A method of data collection that could be considered is EEG, which is used in Jing's research \cite{Jing2024} and \cite{Ruqeyya2022}. However, EEG could be seen as invasive, and the institute will not have this equipment. The method chosen will be a more in-person method, manually recording the player's time played through the creation and appendation of the .CSV file. If a participant has requested that they no longer want their data used, it will be obfuscated from the analysis and destroyed immediately after. Communication with the participant will be important as well, and contact will be kept once a month if they so request.\\
+Data will be recorded in a comma-separated Values file (.CSV). This file format makes it easier to format into graphs using programming languages such as R and Python. Python, with Pandas, MatPlotlib, Numpy and seaborn would need to be used to create the graphs, as seen in the code below. A method of data collection that could be considered is EEG, which is used in Jing's research \cite{Jing2024} and \cite{Ruqeyya2022}. However, EEG could be seen as invasive, and the institute will not have this equipment. The method chosen will be a more in-person method, manually recording the player's time played through the creation and appendation of the CSV file. If a participant has requested that they no longer want their data used, it will be obfuscated from the analysis and destroyed immediately after. Communication with the participant will be important as well, and contact will be kept once a month if they so request.\\
 
 
 %\lstinputlisting[language=Python, caption=Python Script for generating Graphs,captionpos=b, firstline=2, lastline=12]{Data_Analysis/Graph.py}
@@ -129,7 +163,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sb
 
-
 csv_data = pd.read_csv("data.csv")
 
 def plotData():
@@ -137,14 +170,11 @@ def plotData():
     sb.regplot(x = csv_data["X"],y = csv_data["Y"],data = csv_data,ci=None)
     plt.show()
 
-
-
 plotData()
 \end{lstlisting}
-\label{tab:Listing 1}
 
 \subsection{Ethics and safety}
-There are some things to account for with this research, to do with people and their safety. The experiment is in the hands of the participants - being required to read an information form and sign a consent form. They could request the experiment to end early if they no longer consent to the experiment.  If they no longer consent, data will not be used for analysis and will be destroyed. Despite there being little physical risk, risk assessments would still need to be carried out, with the removal of items that could be harmful to participants taking part in the research or the addition of items that could mitigate harm/ provide ease of use with the artefact. This paper will adhere to all codes and laws, including the BCS code of conduct\footnote{\url{https://www.bcs.org/media/2211/bcs-code-of-conduct.pdf}} and the Numremberg code\footnote{\url{https://media.tghn.org/medialibrary/2011/04/BMJ_No_7070_Volume_313_The_Nuremberg_Code.pdf}}.\\
+There are some things to account for with this research, to do with people and their safety. The experiment is in the hands of the participants, who are required to read an information form and sign a consent form. They could request the experiment to end early if they no longer consent to the experiment.  If they no longer consent, data will not be used for analysis and will be destroyed. Despite there being little physical risk, risk assessments would still need to be carried out, with the removal of items that could be harmful to participants taking part in the research or the addition of items that could mitigate harm/ provide ease of use with the artefact. This paper will adhere to all codes and laws, including the BCS code of conduct\footnote{\url{https://www.bcs.org/media/2211/bcs-code-of-conduct.pdf}} and the Nuremberg code\footnote{\url{https://media.tghn.org/medialibrary/2011/04/BMJ_No_7070_Volume_313_The_Nuremberg_Code.pdf}}.\\
 \subsection{Risks}
 The risks of this experiment are centred around the technology used for the experiment. As it is using a mobile device, caution must be taken if the phone is discovered to be faulty, as such faults could cause the triggering of epilepsy, burns due to the battery, and other injuries caused by the materials of the phone breaking. For this reason, the phone's hardware will be thoroughly inspected and software tested beforehand, with all faulty assets being replaced with a more stable phone. Severe software risks involve the aforementioned triggering of epilepsy, with more common risks including headaches, straining on the eyes and neck, and anxiety. For this reason, usage of software will be limited to half an hour and heavily tested. Whilst some of these scenarios are slim and may not even happen, it is better to be prepared and take measures for these edge cases.\\
 
@@ -164,12 +194,12 @@ H1: The Player will have hyperfocus on the game and/or fulfil most of the criter
 
 H2: The Player will not fulfil any criteria, so there is no change plausible.\\
 
-H2 is in line with Nursafika's paper \cite{Nursafika2024}, which is a study using stumble guys, a competitive party game where you compete in various minigames while being subjected to silly in-game physics. With the use of the Game Experience Questionnaire (GEQ) method, they found that 61.46\% of participants could return to reality after playing the game, 58.30\% felt immersed in the game and 57\% felt the game harmed them, which could  be seen as a lesser effect when comparing that result to the 77.28\% of participants who felt the game has had a positive effect on them. At least half of all other values were above 60\%,  with the conclusion that stumble guys have little to no negative impact or addictive nature to players of stumble guys.\\
+H2 is in line with Nursafika's paper \cite{Nursafika2024}, which is a study using stumble guys, a competitive party game where you compete in various minigames while being subjected to silly in-game physics. With the use of the Game Experience Questionnaire (GEQ) method, they found that 61.46\% of participants could return to reality after playing the game, 58.30\% felt immersed in the game and 57\% felt the game harmed them, which could be seen as a lesser effect when comparing that result to the 77.28\% of participants who felt the game has had a positive effect on them. At least half of all other values were above 60\%,  with the conclusion that stumble guys have little to no negative impact or addictive nature to players of stumble guys.\\
 
 H3: The Player will fulfil the criteria of H1, but will continue with the experiment, even after it's over, either through the duration being up or from requesting it to stop. This will fulfil all of the criteria in \cite{NHSHamp24} and be classed as addiction. \\
 
 \subsection{Stats testing}
-Utilising G*Power, A T-test using the Point Biseral Model was conducted to determine the sample size for the experiment. Figure 3 shows that the recommended sample size using a large effect size (0.5), a 0.05 error probability and 0.8 Power will result in the sample size being 21.  this is on the smaller end, similar to the paper Ruqeyya wrote \cite{Ruqeyya2022}, which had only 31 participants.  Python will also be used to construct the graphs for time played and compare the time played with the effect of how long, on average, the participant plays games, if any.\\
+Utilising G*Power, A T-test using the Point Biseral Model was conducted to determine the sample size for the experiment. Figure 3 shows that the recommended sample size using a large effect size (0.5), a 0.05 error probability and 0.8 Power will result in the sample size being 21.  This is on the smaller end, similar to the paper Ruqeyya wrote \cite{Ruqeyya2022}, which had only 31 participants.  Python will also be used to construct the graphs for time played and compare the time played with the effect of how long, on average, the participant plays games, if any.\\
 
 There is a Null hypothesis in which the player does not focus on the game and sees no reason to continue. This has less than a 5\% chance of occurring. 
 \begin{figure}[H]
@@ -190,7 +220,7 @@ A Graph of the G*Power results was also plotted in the program, which portrays t
 One restraint with this research is the sample size. Due to the sample being students within the university. This limits the findings heavily, with there not being enough to get the sample size that will give a more noteworthy effect. In addition, the sample size will be limited even more due to the period for the experiment only being three weeks. This is a similar pitfall to \cite{Naaj2021} and \cite{Ruqeyya2022}.\\
 
 \subsection{Development cycle}
-Artefact development takes up to two weeks, depending on required complexity.
+Artefact development takes up to two weeks, depending on the required complexity.
 
 \section{Results And Discussion}
 \begin{table}[H]
@@ -228,11 +258,11 @@ After conducting the study, the results show a negative correlation. \ref{tab:da
 \label{tab:figure6}
 \end{figure}
 
-It is within reason to suspect and accept from the data that H3 is false, whilst there's plausibility that H1 is true. The best solution for clarifying this is to experiment with a larger participant group, along with a longer time frame to conduct the study. H2 could also be plausible, as it is tied to the null hypothesis and will be subject to the same solution as H1. Overall, this data is inconclusive and more work would need to be done regarding this study.\\
+It is within reason to suspect and accept from the data that H3 is false, whilst there's plausibility that H1 is true. The best solution for clarifying this is to experiment with a larger participant group, along with a longer time frame to conduct the study. H2 could also be plausible, as it is tied to the null hypothesis and will be subject to the same solution as H1. Overall, this data is inconclusive, and more work would need to be done regarding this study.
 
 \begin{figure}[H]
 \includegraphics[width = 0.5\textwidth]{Graph2}
-\caption{The correlation between perceived time and actual time.}
+\caption{The correlation between perceived time and Sleep.}
 \label{tab:figure7}
 \end{figure}
 
@@ -241,7 +271,7 @@ There is, however, a correlation between the number of hours a participant sleep
 
 \begin{figure}[H]
 \includegraphics[width = 0.5\textwidth]{Graph3}
-\caption{The correlation between perceived time and actual time.}
+\caption{The correlation between Actual time and Sleep}
 \label{tab:figure8}
 \end{figure}
 
