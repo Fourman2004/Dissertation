@@ -74,7 +74,7 @@ engagement, obsession, mobile games
 \end{IEEEkeywords}
 
 \section{Introduction}
-The nature of addiction, is a difficult thing to define concisely, as we don't know for certain what classifies as an addiction in an age of technological advancements. It is most prevelent in the games industry, with game addiction being classified as a medical condition \cite{NHSHamp24}. This, however, could be flawed, this paper will take a look at game obsession instead of addiction, and go over game addiciton and player enagement based on game obsession instead of addiction, and challenging the classification of such terms. In this paper, an observation will be made, with the main purpose is to find a further understanding of OGA and to gauge if redefinition is required. The variable that will be used for this study is time, both from actual play time and documented play time. The study will also take a look at public perception and views of OGA, and using the data to help answer research questions present in this paper.
+The nature of addiction is a difficult thing to define concisely, as we don't know for certain what classifies as an addiction in an age of technological advancements. It is most prevelent in the games industry, with game addiction being classified as a medical condition \cite{NHSHamp24}. This, however, could be flawed, this paper will take a look at game obsession instead of addiction, and go over game addiciton and player enagement based on game obsession instead of addiction, and challenging the classification of such terms. In this paper, an observation will be made, with the main purpose is to find a further understanding of OGA and to gauge if redefinition is required. The variable that will be used for this study is time, both from actual play time and documented play time. The study will also take a look at public perception and views of OGA, and using the data to help answer research questions present in this paper.
 
 \section{Background}
 Gaming addiction can be defined in different ways. One paper \cite{yasir2021} defines gaming addiction with the uses and gratification theory and defines overall addiction with the medical paradigm, which has a larger emphasis on biological and psychological dependencies - has been retrofitted to accompany the advancements of technology and specifically in the mobile games industry. This paper also mentions that another study conducted concluded that it can be defined as the regular action of taking drastic actions in the game, such as buying in-game goods or features in a freemium game environment \cite{XWang2021}.S \\
@@ -226,8 +226,28 @@ Because of the nature of H2, it is an ethical risk if the requirements from the 
 One restraint with this research is the sample size. Due to the sample being students within the university. This limits the findings heavily, with there not being enough to get the sample size that will give a more noteworthy effect. In addition, the sample size will be limited even more due to the period for the experiment only being three weeks. This is a similar pitfall to \cite{Naaj2021} and \cite{Ruqeyya2022}.\\
 
 \subsection{Development Cycle}
-%TO DO:  talk about Agile and in what order things were done.
-Utilising Agile for this study, 
+Utilising Agile \footnote{\url{https://www.altexsoft.com/media/2016/04/Agile-Project-Management-Best-Practices-and-Methodologies-Whitepaper.pdf}} for this study - over the course of 7 weeks (27th January 2025 - 13th March 2025), the artefact was created to the standards listed int he BCS's code of conduct.
+
+Week 1 (w/c 27th January): 
+Week 1 saw the creation of the UI Prefab in Unity, along with the ButtonFunctionality.cs Script, which attempted to use coroutines and included a method to automate the base rate of "points". This method for this script was scrapped in favour of a simpler approach the following week.\\
+
+Week 2 (w/c 3rd Febuary):
+Week 2 saw the creation of a Game manager, and the simpler method for ButtonFunctionality.cs, which would just add the value from a function to the value of the Game manager. During this week, the creation of GameManager.cs was made and was used to only contain values, such as an array of all the buttons, and to set the text at the top of the screen to read zero. In addition to GameManager.cs, UpgradeButton.cs was also created, with one empty function.\\
+
+Week 3 (w/c 10th Febuary):
+Week 3 saw the modification of UpgradeButton.cs, to be able to upgrade buttons and increase the amount of points to achive. due to human error, the final product had two faulty buttons. One was highly exploitable, as it would only go up by one, instead of 50\% of the value, the other would overflow and underflow the application, due to the threshold initally overflowing upon the third upgrade. These issues weren't spotted during testing. ButtonText.cs was created during this week, which would allow the display of specific text on the buttons, such as the quantity and how much it is to upgrade. In addition, insight on Unity Unit Testing began this week\\
+
+Week 4 (w/c 17th Febuary):
+Week 4  was relatively bare and saw commenting code and more insight into Unity Unit testing.\\
+
+Week 5 (w/c 24th Jan):
+Week 5 saw the creation of the CollectData() function in the GameManager.cs script. This implementation also attempted to save Player ID, which was later scrapped. This function did, however, Save the time in seconds and as a double. This was changed to be an integer. A build for Android was made, though an issue with the code meant that the CSV file it created couldn't be accessed, So a Windows PC build was made instead.\\
+
+Week 6 (w/c 3rd March):
+Week 6 saw some refinements, such as triggering the DataCollect() Function once and more commenting, and the implementation of some Unit tests, though unsuccessfully. More insight into how to write unit tests was required.\\
+
+Week 7 (w/c 10th March):
+Week 7 saw the successful implementation of Unit tests, as well as Data collection. In a prior week (w/c 9th December 2024) saw the creation of the Data analysis Python Script "Graph.py".\\
 
 \section{Results And Discussion}
 \begin{table}[H]
