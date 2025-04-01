@@ -4,8 +4,7 @@
 
 ### ButtonFunctionality.cs
 #### Scrapped
-`
-using System.Collections;
+`using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,13 +27,11 @@ public class ButtonFunctionality : MonoBehaviour
             StartCoroutine(Coroutine);
         }
     }
-
 }`
 
 
 #### Old
-`
-using System.Collections;
+`using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -57,14 +54,10 @@ public class ButtonFunctionality : MonoBehaviour
         text.text = "Points:" + gameManager.Points.ToString();
        
     }
-
-
-
 }`
 
 #### New
-`
-using System.Collections;
+` using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
