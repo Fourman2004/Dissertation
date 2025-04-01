@@ -4,7 +4,7 @@
 
 ### ButtonFunctionality.cs
 #### Scrapped
-`cs
+`
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,7 +33,7 @@ public class ButtonFunctionality : MonoBehaviour
 
 
 #### Old
-`cs
+`
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -63,7 +63,7 @@ public class ButtonFunctionality : MonoBehaviour
 }`
 
 #### New
-`cs
+`
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
