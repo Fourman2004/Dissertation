@@ -30,7 +30,9 @@ public class ButtonFunctionality : MonoBehaviour
     }
 
 }```
-``#### Old``
+
+
+#### Old
 ```cs
 using System.Collections;
 using System.Collections.Generic;
