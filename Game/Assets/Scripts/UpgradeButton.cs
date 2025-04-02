@@ -36,7 +36,7 @@ public class UpgradeButton : MonoBehaviour
             buttonToUpgrade.quantity++;
             gameManager.Points -= (int)threshold;
             gameManager.text.text = "Points:" + gameManager.Points.ToString();
-            threshold += (int)Mathf.Pow(threshold, Mult);
+            threshold += (int)(threshold*Mult);
             Debug.Log("New Threshold:" + threshold);
         }
         else
